@@ -38,10 +38,12 @@ Del curso de UDEMY Microservicios con SpringBoot Cloud y Docker
                             DELETE -> eliminar
 16.Testing de servicios
   Trabaja con el proyecto 03_microservicio_cursos_crud con JUNIT
-  Se modifica ApplicaationTests.java
-  Se hacen pruebas con junit Sobre la clase anterior Run As / Junit test
-  El resultado sale en la consola
+  Se modifica ApplicaationTests.java y se crean metodos para probar el borrado, mostrar los cursos, actualizar , e insertar
+  Para probar con junit sobre la clase ApplicaationTests Run As / Junit test
+  Y el resultado sale en la consola, mostrando los cursos , el que se agrega  y luego ya modificado
   
+19.Desarrollo de un pmicroservicio de contactos I
+    Se implementa JPA y Spring Data JPA , MySql Driver, Spring Web
     
   
   
