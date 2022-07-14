@@ -23,7 +23,7 @@ Del curso de UDEMY Microservicios con SpringBoot Cloud y Docker
 13.Ejercicio practico mapeando a objetos XML
   Se utiliza el proyecto 02microservicio_cursos
   Se agreaga una dependency al pon.xml
-    <dependency>
+	    <dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
@@ -43,8 +43,48 @@ Del curso de UDEMY Microservicios con SpringBoot Cloud y Docker
   Y el resultado sale en la consola, mostrando los cursos , el que se agrega  y luego ya modificado
   
 19.Desarrollo de un pmicroservicio de contactos I
-    Se implementa JPA y Spring Data JPA , MySql Driver, Spring Web
-    
+			----------------------------
+	Se crea proyecto 04_microservicio_contactos
+			----------------------------
+    	Se implementa JPA y Spring Data JPA , MySql Driver, Spring Web
+	Se setea project facets seleccionando JPA y Java
+	Boton derecho sobre el proyecto JPA Tools/ Generate Entities from Tables
+	Se ponen el driver y los datos de conexion de la base
+	Se genera una entiti seleccionado cotactos y genera Contacto.java
+20.Desarrollo de un pmicroservicio de contactos II
+	Se crea la capa DAO
+	Se crea AgendaDao
+	Se crea AgendaJpaSpring  (se usa JPQL)
+	Se crea AgendaDaoImp 
+21.Desarrollo de un pmicroservicio de contactos III	
+	Se crea la capa de servicio	
+	Se crea interface AgendaService.java
+	Se crea AgendaServiceImpl.java (Se agrega @Service)
+22.Desarrollo de un pmicroservicio de contactos IV	
+	Se crea el controlador ContactosController.java (@Restcontroller)
+	Se implementan metodos: GET -> recuperar
+                            	POST -> insertar
+                            	PUT -> actualizar
+                            	DELETE -> eliminar
+	Se ingresan datos de conexion en application.properties
+	Se hacen pruebas con postman
+	
+23.Ejemplo de cliente front
+	Se descarga un proyecto que se tiene en angular / javascript
+	Se ejecuta y se obtiene un listado de cursos y en cada uno un link para eliminar
+24.Empaquetado y despliegue
+	Boton derecho sobre el proyecto Run As / Maven build...
+	En Goals se pone deploy
+	Clic en run  y genera un archivo jar en el workspace / nombre del proyecto
+	Ese jar se puede copiar a otro equipo y en ese equipo se ejecuta desde linea de comandos
+		java -jar nombredeljar.jar
+	Se ejecuta y se puede probar accediendo a locahltos:8080\cursos
+	
+	
+	
+	
+	
+    	    
   
   
   
