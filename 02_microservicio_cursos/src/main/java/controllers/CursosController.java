@@ -26,8 +26,10 @@ public class CursosController {
 		cursos.add(new Curso("Java Basico",30,"mañana"));
 	}
 	
-	//DEVUELVE LA LISTA DE TODOS LOS CURSOS
-	@GetMapping(value="cursos", produces=MediaType.APPLICATION_XML_VALUE)
+	//DEVUELVE LA LISTA DE TODOS LOS CURSOS 
+	//para XML  : MediaType.APPLICATION_XML_VALUE
+	//Para JSON : MediaType.APPLICATION_JSON_VALUE
+	@GetMapping(value="cursos", produces=MediaType.APPLICATION_JSON_VALUE)
 	public List<Curso> getCursos(){
 		return cursos;
 	}

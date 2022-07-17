@@ -16,6 +16,7 @@ public class AgendaServiceImpl implements AgendaService {
 	
 	@Override
 	public boolean agregarContacto(Contacto contacto) {
+		//SE VALIDA SI EL CONTACTO NO EXISTE, SE AGREGA Y SI YA EXISTE NO SE HACE NADA
 		if(dao.recuperarContacto(contacto.getIdContacto())==null) {			
 			dao.agregarContacto(contacto);
 			return true;
@@ -25,11 +26,20 @@ public class AgendaServiceImpl implements AgendaService {
 
 	@Override
 	public List<Contacto> recuperarContactos() {
+		//SE AGREGA UN TIEMPO PARA VER EL EFECTO EN EL MICROSERVICIO 05_B
+		/*try {
+			Thread.sleep(8000); //8 SEGUNDOS
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		*/
 		return dao.devolverContactos();
 	}
 
 	@Override
 	public void actualizarContacto(Contacto contacto) {
+		//VALIDA SI HAY CONTACTO QUE ACTUALIZAR, SINO PUES NO HACE NADA
 		if(dao.recuperarContacto(contacto.getIdContacto())!=null) {			
 			dao.agregarContacto(contacto);
 		}
@@ -37,6 +47,7 @@ public class AgendaServiceImpl implements AgendaService {
 
 	@Override
 	public boolean eliminarContacto(int idContacto) {
+		//VALIDA SI EXISTE, ENTONCES LO ELIMINA
 		if(dao.recuperarContacto(idContacto)!=null) {			
 			dao.eliminarContacto(idContacto);
 			return true;
