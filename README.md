@@ -79,10 +79,18 @@ Del curso de UDEMY Microservicios con SpringBoot Cloud y Docker
 	Ese jar se puede copiar a otro equipo y en ese equipo se ejecuta desde linea de comandos
 		java -jar nombredeljar.jar
 	Se ejecuta y se puede probar accediendo a locahltos:8080\cursos
-	
-	
-	
-	
+26.Desarrollo de microservicio cliente de contactos
+	Se crea el proeycto 05_microservicio_cliente_contactos
+	Se crea el bean Personas.java
+	Se utiliza RestTemplate, agregandolo en Application.java
+	En el controller (PersonasController.java) se hace el llamado al otro microservicio /contactos
+27.Interaccion en modo asincrono
+	Se hace una copia del proyecto anterio y se renombra 05_b_microservicio_cliente_asincrono
+	En Application.java se agrega el Executor
+	Renombra AccesoService a AccesoServiceImpl
+	Se crea la interface a partir del service
+	En el controller(PersonasController) se implementa CompletableFuture
+	Se modifica el proyecto 04 para agregarle un delayy y ver que corre asincrono mientras se ejecuta lo demas
 	
     	    
   
