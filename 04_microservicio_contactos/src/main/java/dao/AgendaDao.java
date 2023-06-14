@@ -19,4 +19,9 @@ public interface AgendaDao {
 	Contacto recuperarContacto(int idContacto);
 	
 	void actualizarContacto(Contacto contacto);
+	
+	List<Contacto> devolverContactoXnombre(String nombre);
+	
+	List<Contacto> devolverContactoXedad(Integer edad);
+	
 }

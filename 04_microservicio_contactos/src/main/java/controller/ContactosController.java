@@ -52,5 +52,17 @@ public class ContactosController {
 	public void eliminarPorId(@PathVariable("id") int id) {
 		service.eliminarContacto(id);
 	}
+		
+	//OBTENER LOS CONTACTOS POR NOMBRE
+	@GetMapping(value="contactosXnombre/{nombre}",produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Contacto> recuperarContactosXnombre(@PathVariable("nombre") String nom) {
+		return service.recuperarContactosXnombre(nom);
+	}
+	
+	//OBTENER LOS CONTACTOS POR NOMBRE
+	@GetMapping(value="contactosXedad/{edad}",produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Contacto> recuperarContactosXedad(@PathVariable("edad") Integer ed) {
+		return service.recuperarContactosXedad(ed);
+	}
 	
 }

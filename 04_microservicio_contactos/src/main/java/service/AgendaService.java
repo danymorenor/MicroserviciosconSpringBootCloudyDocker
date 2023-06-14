@@ -13,5 +13,6 @@ public interface AgendaService {
 	boolean eliminarContacto(int idContacto);
 	Contacto buscarContacto(int idContacto);
 	void actualizarContacto(Contacto contacto);
-	
+	List<Contacto> recuperarContactosXnombre(String nombre);
+	List<Contacto> recuperarContactosXedad(Integer edad);
 }

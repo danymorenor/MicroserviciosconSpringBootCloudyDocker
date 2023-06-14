@@ -30,7 +30,6 @@ public class AgendaServiceImpl implements AgendaService {
 		/*try {
 			Thread.sleep(8000); //8 SEGUNDOS
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		*/
@@ -60,4 +59,13 @@ public class AgendaServiceImpl implements AgendaService {
 		return dao.recuperarContacto(idContacto);
 	}
 
+	@Override
+	public List<Contacto> recuperarContactosXnombre(String nombre) {
+		return dao.devolverContactoXnombre(nombre);
+	}
+	
+	@Override
+	public List<Contacto> recuperarContactosXedad(Integer edad) {
+		return dao.devolverContactoXedad(edad);
+	}
 }
