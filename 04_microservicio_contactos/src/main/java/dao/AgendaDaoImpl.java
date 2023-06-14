@@ -7,12 +7,17 @@ import org.springframework.stereotype.Repository;
 
 import model.Contacto;
 
-@Repository
+@Repository	
 public class AgendaDaoImpl implements AgendaDao {
 
 	@Autowired
 	AgendaJpaSpring agenda;
+<<<<<<< HEAD
 	
+=======
+
+
+>>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5
 	@Override
 	public void agregarContacto(Contacto contacto) {
 		agenda.save(contacto);
@@ -32,22 +37,26 @@ public class AgendaDaoImpl implements AgendaDao {
 	public List<Contacto> devolverContactos() {
 		return agenda.findAll();
 	}
-
+	
 	@Override
 	public void eliminarContacto(int idContacto) {
 		agenda.deleteById(idContacto);
+		
 	}
 
 	@Override
-	public Contacto recuperarContacto(int idContacto) {
+	public Contacto recuperarContacto(int idContacto) {	
 		return agenda.findById(idContacto).orElse(null);
 	}
 
 	@Override
 	public void actualizarContacto(Contacto contacto) {
 		agenda.save(contacto);
+		
 	}
+	
 
+<<<<<<< HEAD
 	@Override
 	public List<Contacto> devolverContactoXnombre(String nombre){
 		return agenda.buscaXNombre(nombre);
@@ -58,3 +67,6 @@ public class AgendaDaoImpl implements AgendaDao {
 		return agenda.buscaXedad(edad);
 	}
 }
+=======
+} 
+>>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5

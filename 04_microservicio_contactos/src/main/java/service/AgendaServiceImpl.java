@@ -13,19 +13,19 @@ public class AgendaServiceImpl implements AgendaService {
 
 	@Autowired
 	AgendaDao dao;
-	
 	@Override
 	public boolean agregarContacto(Contacto contacto) {
-		//SE VALIDA SI EL CONTACTO NO EXISTE, SE AGREGA Y SI YA EXISTE NO SE HACE NADA
-		if(dao.recuperarContacto(contacto.getIdContacto())==null) {			
+		//añade el contacto si no existe	
+		if(dao.recuperarContacto(contacto.getIdcontacto())==null) {
 			dao.agregarContacto(contacto);
 			return true;
 		}
-		return false;		
+		return false;
 	}
 
 	@Override
 	public List<Contacto> recuperarContactos() {
+<<<<<<< HEAD
 		//SE AGREGA UN TIEMPO PARA VER EL EFECTO EN EL MICROSERVICIO 05_B
 		/*try {
 			Thread.sleep(8000); //8 SEGUNDOS
@@ -33,25 +33,27 @@ public class AgendaServiceImpl implements AgendaService {
 			e.printStackTrace();
 		}
 		*/
+=======
+>>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5
 		return dao.devolverContactos();
 	}
 
 	@Override
 	public void actualizarContacto(Contacto contacto) {
-		//VALIDA SI HAY CONTACTO QUE ACTUALIZAR, SINO PUES NO HACE NADA
-		if(dao.recuperarContacto(contacto.getIdContacto())!=null) {			
-			dao.agregarContacto(contacto);
+		//elimina el contacto si existe
+		if(dao.recuperarContacto(contacto.getIdcontacto())!=null) {
+			dao.actualizarContacto(contacto);
 		}
+
 	}
 
 	@Override
 	public boolean eliminarContacto(int idContacto) {
-		//VALIDA SI EXISTE, ENTONCES LO ELIMINA
-		if(dao.recuperarContacto(idContacto)!=null) {			
+		if(dao.recuperarContacto(idContacto)!=null) {
 			dao.eliminarContacto(idContacto);
 			return true;
 		}
-		return false;	
+		return false;
 	}
 
 	@Override
@@ -59,6 +61,7 @@ public class AgendaServiceImpl implements AgendaService {
 		return dao.recuperarContacto(idContacto);
 	}
 
+<<<<<<< HEAD
 	@Override
 	public List<Contacto> recuperarContactosXnombre(String nombre) {
 		return dao.devolverContactoXnombre(nombre);
@@ -69,3 +72,6 @@ public class AgendaServiceImpl implements AgendaService {
 		return dao.devolverContactoXedad(edad);
 	}
 }
+=======
+} 
+>>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5

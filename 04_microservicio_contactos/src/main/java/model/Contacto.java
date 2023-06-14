@@ -4,6 +4,8 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 
+
+
 /**
  * The persistent class for the contactos database table.
  * 
@@ -11,12 +13,12 @@ import javax.persistence.*;
 @Entity
 @Table(name="contactos")
 @NamedQuery(name="Contacto.findAll", query="SELECT c FROM Contacto c")
-public class Contacto implements Serializable {
+public class Contacto implements Serializable { 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idContacto;
+	private int idcontacto;
 
 	private int edad;
 
@@ -27,12 +29,12 @@ public class Contacto implements Serializable {
 	public Contacto() {
 	}
 
-	public int getIdContacto() {
-		return this.idContacto;
+	public int getIdcontacto() {
+		return this.idcontacto;
 	}
 
-	public void setIdContacto(int idContacto) {
-		this.idContacto = idContacto;
+	public void setIdcontacto(int idcontacto) {
+		this.idcontacto = idcontacto;
 	}
 
 	public int getEdad() {
@@ -59,4 +61,4 @@ public class Contacto implements Serializable {
 		this.nombre = nombre;
 	}
 
-}
+} 
