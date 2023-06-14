@@ -7,16 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import model.Contacto;
 
-public interface AgendaJpaSpring extends JpaRepository<Contacto, Integer>{
-
-	//METODO PARA HACER UNA BUSQUEDA POR EMAIL
+public interface AgendaJpaSpring  extends JpaRepository<Contacto, Integer>{
 	Contacto findByEmail(String email);
-	
-	//METODO PARA ELIMINAR UN CONTACTO DE ACUERDO A SU EMAIL, CON UNA INSTRUCCION JPQL
 	@Transactional
 	@Modifying
-	@Query("Delete from Contacto c where c.email=?1")
+	@Query("Delete from Contacto c Where c.email=?1")
 	void eliminarPorEmail(String email);
-	
-	
-}
+} 

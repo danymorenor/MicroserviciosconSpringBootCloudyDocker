@@ -7,13 +7,13 @@ import org.springframework.stereotype.Repository;
 
 import model.Contacto;
 
-@Repository
+@Repository	
 public class AgendaDaoImpl implements AgendaDao {
 
 	@Autowired
 	AgendaJpaSpring agenda;
-	
-	
+
+
 	@Override
 	public void agregarContacto(Contacto contacto) {
 		agenda.save(contacto);
@@ -33,20 +33,23 @@ public class AgendaDaoImpl implements AgendaDao {
 	public List<Contacto> devolverContactos() {
 		return agenda.findAll();
 	}
-
+	
 	@Override
 	public void eliminarContacto(int idContacto) {
 		agenda.deleteById(idContacto);
+		
 	}
 
 	@Override
-	public Contacto recuperarContacto(int idContacto) {
+	public Contacto recuperarContacto(int idContacto) {	
 		return agenda.findById(idContacto).orElse(null);
 	}
 
 	@Override
 	public void actualizarContacto(Contacto contacto) {
 		agenda.save(contacto);
+		
 	}
+	
 
-}
+} 
