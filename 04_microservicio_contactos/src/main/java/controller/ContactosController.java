@@ -43,7 +43,7 @@ public class ContactosController {
 		service.eliminarContacto(idContacto);
 		
 	}
-<<<<<<< HEAD
+
 		
 	//OBTENER LOS CONTACTOS POR NOMBRE
 	@GetMapping(value="contactosXnombre/{nombre}",produces=MediaType.APPLICATION_JSON_VALUE)
@@ -58,6 +58,3 @@ public class ContactosController {
 	}
 	
 }
-=======
-} 
->>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5

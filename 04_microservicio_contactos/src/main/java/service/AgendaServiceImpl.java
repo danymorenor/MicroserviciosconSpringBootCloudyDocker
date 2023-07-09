@@ -25,7 +25,6 @@ public class AgendaServiceImpl implements AgendaService {
 
 	@Override
 	public List<Contacto> recuperarContactos() {
-<<<<<<< HEAD
 		//SE AGREGA UN TIEMPO PARA VER EL EFECTO EN EL MICROSERVICIO 05_B
 		/*try {
 			Thread.sleep(8000); //8 SEGUNDOS
@@ -33,8 +32,6 @@ public class AgendaServiceImpl implements AgendaService {
 			e.printStackTrace();
 		}
 		*/
-=======
->>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5
 		return dao.devolverContactos();
 	}
 
@@ -61,7 +58,6 @@ public class AgendaServiceImpl implements AgendaService {
 		return dao.recuperarContacto(idContacto);
 	}
 
-<<<<<<< HEAD
 	@Override
 	public List<Contacto> recuperarContactosXnombre(String nombre) {
 		return dao.devolverContactoXnombre(nombre);
@@ -72,6 +68,3 @@ public class AgendaServiceImpl implements AgendaService {
 		return dao.devolverContactoXedad(edad);
 	}
 }
-=======
-} 
->>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5

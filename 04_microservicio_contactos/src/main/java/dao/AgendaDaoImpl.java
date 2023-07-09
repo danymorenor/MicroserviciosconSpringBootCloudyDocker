@@ -12,12 +12,9 @@ public class AgendaDaoImpl implements AgendaDao {
 
 	@Autowired
 	AgendaJpaSpring agenda;
-<<<<<<< HEAD
 	
-=======
 
 
->>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5
 	@Override
 	public void agregarContacto(Contacto contacto) {
 		agenda.save(contacto);
@@ -56,7 +53,6 @@ public class AgendaDaoImpl implements AgendaDao {
 	}
 	
 
-<<<<<<< HEAD
 	@Override
 	public List<Contacto> devolverContactoXnombre(String nombre){
 		return agenda.buscaXNombre(nombre);
@@ -67,6 +63,3 @@ public class AgendaDaoImpl implements AgendaDao {
 		return agenda.buscaXedad(edad);
 	}
 }
-=======
-} 
->>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5

@@ -20,12 +20,8 @@ public interface AgendaDao {
 	
 	void actualizarContacto(Contacto contacto);
 	
-<<<<<<< HEAD
 	List<Contacto> devolverContactoXnombre(String nombre);
 	
 	List<Contacto> devolverContactoXedad(Integer edad);
 	
 }
-=======
-} 
->>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5

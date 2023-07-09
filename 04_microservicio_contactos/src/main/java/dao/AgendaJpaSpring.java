@@ -15,7 +15,6 @@ public interface AgendaJpaSpring  extends JpaRepository<Contacto, Integer>{
 	@Modifying
 	@Query("Delete from Contacto c Where c.email=?1")
 	void eliminarPorEmail(String email);
-<<<<<<< HEAD
 	
 	
 	//METODO CON QUERY ANOTATION
@@ -28,6 +27,3 @@ public interface AgendaJpaSpring  extends JpaRepository<Contacto, Integer>{
 	public List<Contacto> buscaXedad(Integer edad);
 	
 }
-=======
-} 
->>>>>>> 90382e8db7bb9098da8e2f055cfebe534b0611c5
